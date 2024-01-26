@@ -35,12 +35,24 @@ def location():
 location()
 
 
-# user name
+# User name
 def username():
-    # multi-questions quiz with options and answers numbers
-    # def quiz(questions):
 
-    questions = [
+    user_name = input('What is your name? ')
+
+    # Ensure that username is not empty
+    if user_name.strip():
+        print(f"{Fore.GREEN}Hello {user_name}, welcome to our quiz game!\n")
+
+
+# Call the username function to start the input
+username()
+
+# multi-questions quiz with options and answers numbers
+# def quiz(questions):
+
+
+questions = [
         {
             "question":
             "Which of the following is not a primitive data type in Python?",
@@ -65,9 +77,10 @@ def username():
 
 
 # if you use less than 15seconds you earn 10 points else you get 5 points
-    timer()
+timer()
 
-    score = 0
+
+score = 0
 
 
 # choice to exit or replay
