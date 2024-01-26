@@ -83,15 +83,30 @@ def quiz(questions):
 
         for option in question["options"]:
             print(option)
-        answer = input(f"{Fore.BLUE}Your answer: ")
 
+        # Start the timer
+        start_time = time.time()
+
+        answer = input(f"{Fore.BLUE}Your answer: ")
+        # End the timer
+        end_time = time.time()
+        # Calculate elapsed time
+        elapsed_time = end_time - start_time
+        
         if int(answer) == question["answer"]:
-            print(f"{Fore.GREEN}Correct! 10 points\n")
-            score += 10
-            print('******************************************************\n')
-        else:
-            print(f"{Fore.RED}Incorrect!\n")
-            print('******************************************************\n')
+            # If the participant answers within 15 seconds
+            if elapsed_time <= 15:
+                print(f"{Fore.GREEN}Correct! 10 points{Fore.WHITE}")
+                score += 10
+                print('******************************************************\n')
+            else:
+                print(f"{Fore.GREEN}Correct! 5 points{Fore.WHITE}")
+                score += 5
+                print('******************************************************\n')
+    else:
+        print(f"{Fore.RED}Incorrect!\n")
+        print('******************************************************\n')
+    # This print statement ends the quiz and shows the final score.
     print(f"{Fore.BLUE}You scored: {score} \
         {Fore.GREEN}out of {len(questions) * 10}\n")
     print('******************************************************\n')
