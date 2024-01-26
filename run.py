@@ -45,13 +45,10 @@ def username():
         print(f"{Fore.GREEN}Hello {user_name}, welcome to our quiz game!\n")
 
 
-# Call the username function to start the input
+# Call the username function to prompt for input
 username()
 
 # multi-questions quiz with options and answers numbers
-# def quiz(questions):
-
-
 questions = [
         {
             "question":
@@ -71,6 +68,26 @@ questions = [
             "answer": 4
         },
     ]
+
+
+def quiz(questions):
+    score = 0
+    for question in questions:
+        print(question["question"])
+
+        for option in question["options"]:
+            print(option)
+        answer = input(f"{Fore.BLUE}Your answer: ")
+
+        if int(answer) == question["answer"]:
+            print(f"{Fore.GREEN}Correct! 10 points{Fore.WHITE}")
+            score += 10
+        else:
+            print(f"{Fore.RED}Incorrect!{Fore.WHITE}")
+
+
+quiz(questions)
+
 
 # validating error in answering, not to use strings
 # def validate(answers):
