@@ -2,6 +2,7 @@
 import colorama
 import time
 import pycountry
+import sys
 
 from colorama import Fore, Style
 
@@ -174,3 +175,13 @@ else:
     # Game over message
     print(f"{Fore.YELLOW}Goodbye, see you soon!\n")
     print('******************************************************\n')
+
+# Exit quiz at any time "am thinking of a button"
+exit_now = input("Type 'EXIT or E/e' to quit the quiz,\
+    or press Enter to contitue: ").lower()
+if exit_now == 'EXIT or E':
+    print('Exiting the quiz now...')
+    sys.exit()
+
+
+    
