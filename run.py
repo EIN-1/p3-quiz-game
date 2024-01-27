@@ -12,14 +12,14 @@ colorama.init(autoreset=True)
 print(f"\n{Fore.GREEN}WELCOME TO THE PYTHON QUIZ GAME\n")
 print('******************************************************\n')
 
-print(f"\n{Fore.BLUE}Please select the correct answer. For each question\n"
-      f"answered correctly within 15 seconds, you will earn 10 points.\n"
-      f"If it takes longer than that, you earn 5 points:\n\n")
+print(f"{Fore.YELLOW}Please select the correct answer.\n\n"
+      f"{Fore.GREEN}# For each correctly answered question,"
+      "answered within 15 seconds, you will earn 10 points."
+      "If it takes longer than that, you earn 5 points.\n"
+      "# After the game please place any key to leave\n"
+      "# To contitue playing type yes\n")
 print('******************************************************\n')
 
-print(f"\n{Fore.YELLOW} After the game please place any key to leave\n")
-print(f"\n{Fore.YELLOW} To contitue playing type yes\n")
-print('******************************************************\n')
 
 # define location function
 # which country are you in
@@ -67,21 +67,24 @@ def quiz(questions):
         for option in question["options"]:
             print(option)
 
-        while True:
-            answer = input(f"{Fore.BLUE}Please answer (1-{len(question['options'])}): ")
-            int_answer = validate(answer, len(question["options"]))
-            if int_answer is not None:
-                break
-
         # Start the timer
         start_time = time.time()
+        # I set elapsed_time to 12 seconds
+        elapsed_time = 12
 
-        # End the timer and calculate elapsed time
-        end_time = time.time()
-        elapsed_time = end_time - start_time
+        while True:
+            answer = input(f"{Fore.BLUE}Please answer? ")
+            (f"(1-{len(question['options'])}): ")
+            int_answer = validate(answer, len(question["options"]))
+            if int_answer is not None:
+                # End the timer and calculate elapsed time
+                end_time = time.time()
+                elapsed_time = end_time - start_time
+                break
 
         if int_answer == question["answer"]:
-            if elapsed_time <= 15:  # Changed to check if under or equal to 15 seconds as per instructions
+            # Changed to check if under or equal to 15 seconds
+            if elapsed_time <= 12:
                 print(f"{Fore.GREEN}Correct! 10 points")
                 score += 10
             else:
@@ -92,7 +95,8 @@ def quiz(questions):
         print('****************************************************\n')
 
     # Print the final score after all questions have been answered
-    print(f"{Fore.BLUE}You scored: {score}{Fore.GREEN} out of {len(questions) * 10}{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}You scored: {score}\
+{Fore.GREEN} out of {len(questions) * 10}{Style.RESET_ALL}\n")
     print('*****************************************************\n\n')
 
 
@@ -103,7 +107,8 @@ username()
 # Define the list of quiz questions
 questions = [
     {
-        "question": "Which of the following is not a primitive data type in Python?",
+        "question": "Which of the following is \
+not a primitive data type in Python?",
         "options": ["1) Integer", "2) String", "3) List", "4) Function"],
         "answer": 4
     },
@@ -125,11 +130,11 @@ quiz(questions)
 
 
 # Ask the player if they want to play again
-repeat = input(f"{Fore.YELLOW}Do you want to play again (YES/NO)? ").lower()
+repeat = input(f"{Fore.YELLOW}Do you want to play again (YES/NO)? \n").lower()
 print('******************************************************\n')
-
+# Restart the quiz
 if repeat == 'yes':
-    quiz(questions)  # Restart the quiz
+    quiz(questions)
 else:
     # Game over message
     print(f"{Fore.YELLOW}Goodbye, see you soon!\n")
