@@ -14,9 +14,9 @@ print('******************************************************\n')
 
 print(f"{Fore.YELLOW}Please select the correct answer.\n\n"
       f"{Fore.GREEN}# For each correctly answered question,"
-      "answered within 15 seconds, you will earn 10 points."
+      "answered within 12 seconds, you will earn 10 points."
       "If it takes longer than that, you earn 5 points.\n"
-      "# After the game please place any key to leave\n"
+      "# After the game please place ANY-KEY to leave\n"
       "# To contitue playing type yes\n")
 print('******************************************************\n')
 
@@ -83,7 +83,7 @@ def quiz(questions):
                 break
 
         if int_answer == question["answer"]:
-            # Changed to check if under or equal to 15 seconds
+            # Changed to check if under or equal to 12 seconds
             if elapsed_time <= 12:
                 print(f"{Fore.GREEN}Correct! 10 points")
                 score += 10
@@ -122,7 +122,42 @@ not a primitive data type in Python?",
                     "code: x = 7, followed by (x * 3)?",
         "options": ["1) 8", "2) error", "3) 15", "4) 21"],
         "answer": 4
-    }
+    },
+    {
+        "question":
+        "Which programming language is known as the 'language of the web'?",
+        "options": ["1) Python", "2) Java", "3) JavaScript"],
+        "answer": 3
+    },
+    {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["1) define", "2) func", "3) def", "4) function"],
+        "answer": 3
+    },
+    {
+        "question":
+        "What does the 'self' parameter refer to in a class method in Python?",
+        "options": [
+            "1) It refers to the current object instance",
+            "2) It refers to the parent class",
+            "3) It refers to the derived class",
+            "4) It refers to the static class"
+        ],
+        "answer":
+        1
+    },
+    {
+        "question":
+        "Which module in Python is used for working with regular expressions?",
+        "options": ["1) datetime", "2) math", "3) os", "4) re"],
+        "answer": 4
+    },
+    {
+        "question": "How do you comment a line of code in Python?",
+        "options":
+        ["1) // comment", "2) /* comment */", "3) # comment", "4) n"],
+        "answer": 3
+    },
 ]
 
 # Start the quiz
@@ -130,8 +165,8 @@ quiz(questions)
 
 
 # Ask the player if they want to play again
-repeat = input(f"{Fore.YELLOW}Do you want to play again (YES/NO)? \n").lower()
-print('******************************************************\n')
+repeat = input(f"{Fore.YELLOW}You wish to Replay, (YES/NO)? ").lower()
+print('\n******************************************************\n')
 # Restart the quiz
 if repeat == 'yes':
     quiz(questions)
