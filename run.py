@@ -17,6 +17,9 @@ print(f"\n{Fore.BLUE}Please select the correct answer. For each question\n"
       f"If it takes longer than that, you earn 5 points:\n\n")
 print('******************************************************\n')
 
+print(f"\n{Fore.YELLOW} After the game please place any key to leave\n")
+print(f"\n{Fore.YELLOW} To contitue playing type yes\n")
+print('******************************************************\n')
 
 # define location function
 # which country are you in
