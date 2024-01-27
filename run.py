@@ -56,7 +56,7 @@ def validate(answer, num_options):
     return None
 
 
-# The main function for the quiz
+# The main quiz function
 def quiz(questions):
     score = 0
     for question in questions:
@@ -64,66 +64,60 @@ def quiz(questions):
         for option in question["options"]:
             print(option)
 
-    # Loop until a valid answer is entered
-    while True:
-        answer = input(f"{Fore.BLUE}Please answer\
-        (1-{len(question['options'])}): ")
-        int_answer = validate(answer, len(question["options"]))
-        if int_answer is not None:
-            # Exit the loop when the answer is valid
-            break
+        while True:
+            answer = input(f"{Fore.BLUE}Please answer (1-{len(question['options'])}): ")
+            int_answer = validate(answer, len(question["options"]))
+            if int_answer is not None:
+                break
 
         # Start the timer
         start_time = time.time()
-        # End the timer
+
+        # End the timer and calculate elapsed time
         end_time = time.time()
-        # Calculate elapsed time
         elapsed_time = end_time - start_time
 
         if int_answer == question["answer"]:
-            # if the participant answers within 15 seconds, earns 10 points
-            if elapsed_time <= 15:
+            if elapsed_time <= 15:  # Changed to check if under or equal to 15 seconds as per instructions
                 print(f"{Fore.GREEN}Correct! 10 points")
                 score += 10
             else:
-                # or else participant earns only 5 points if more than 15sec.
                 print(f"{Fore.GREEN}Correct! 5 points")
                 score += 5
-        # checking if answer is false then print incorrect.
         else:
             print(f"{Fore.RED}Incorrect!")
         print('****************************************************\n')
 
-        # This print statement is the final quiz and shows the final score.
-    print(f"{Fore.BLUE}You scored: {score}\
-    {Fore.GREEN}out of {len(questions) * 10}{Style.RESET_ALL}\n")
+    # Print the final score after all questions have been answered
+    print(f"{Fore.BLUE}You scored: {score}{Fore.GREEN} out of {len(questions) * 10}{Style.RESET_ALL}")
     print('*****************************************************\n\n')
 
 
-# Call the location and username function here
+# Call the location and username functions
 location()
 username()
 
-# multi-questions quiz with options and answers numbers
-# define the quiz quection list
-questions = [{
-        "question":
-        "Which of the following is not a primitive data type in Python?",
+# Define the list of quiz questions
+questions = [
+    {
+        "question": "Which of the following is not a primitive data type in Python?",
         "options": ["1) Integer", "2) String", "3) List", "4) Function"],
         "answer": 4
-    }, {
+    },
+    {
         "question": "What is the largest planet in our solar system?",
         "options": ["1) Jupiter", "2) Mars", "3) Earth"],
         "answer": 1
-    }, {
-        "question": "What is the result of the following code snippet?\
-        \ncode: x = 7, followed by (x * 3)?",
+    },
+    {
+        "question": "What is the result of the following code snippet?\n"
+                    "code: x = 7, followed by (x * 3)?",
         "options": ["1) 8", "2) error", "3) 15", "4) 21"],
         "answer": 4
-    }]
+    }
+]
 
-
-# Call the quiz function with the questions to start the quiz
+# Start the quiz
 quiz(questions)
 
 
