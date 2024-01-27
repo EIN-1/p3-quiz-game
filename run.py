@@ -68,11 +68,11 @@ questions = [
             "answer": 1
         },
         {
-            "question": "What is the result of the following code snippet?",
-            "code": ["x = 7", "print(x * 3)"],
+            "question": "What is the result of the following code snippet?\
+            \ncode: x = 7, followed by (x * 3)?",
             "options": ["1) 8", "2) error", "3) 15", "4) 21"],
             "answer": 4
-        },
+        }
     ]
 
 
@@ -80,51 +80,45 @@ def quiz(questions):
     score = 0
     for question in questions:
         print(question["question"])
-
         for option in question["options"]:
             print(option)
 
         # Start the timer
         start_time = time.time()
-
-        answer = input(f"{Fore.BLUE}Your answer: ")
+        # user puts in the answer form 1-4 digits
+        answer = input(f"{Fore.BLUE} Please answer (1-4): ")
         # End the timer
         end_time = time.time()
         # Calculate elapsed time
         elapsed_time = end_time - start_time
-        
+
         if int(answer) == question["answer"]:
-            # If the participant answers within 15 seconds
+            # if the participant answers within 15 seconds, earns 10 points
             if elapsed_time <= 15:
                 print(f"{Fore.GREEN}Correct! 10 points{Fore.WHITE}")
                 score += 10
-                print('******************************************************\n')
+                print('****************************************************\n')
             else:
+                # or else participant earns only 5 points if more than 15sec.
                 print(f"{Fore.GREEN}Correct! 5 points{Fore.WHITE}")
                 score += 5
-                print('******************************************************\n')
-    else:
-        print(f"{Fore.RED}Incorrect!\n")
-        print('******************************************************\n')
-    # This print statement ends the quiz and shows the final score.
+                print('****************************************************\n')
+        # checking if answer is false the print incorrect.
+        else:
+            print(f"{Fore.RED}Incorrect!{Fore.WHITE}")
+            print('****************************************************\n')
+
+        # This print statement ends the quiz and shows the final score.
     print(f"{Fore.BLUE}You scored: {score} \
         {Fore.GREEN}out of {len(questions) * 10}\n")
-    print('******************************************************\n')
+    print('*****************************************************\n\n')
 
 
+# Call the quiz function with the questions
 quiz(questions)
 
 
 # validating error in answering, not to use strings
-# def validate(answers):
-
-
-# if you use less than 15seconds you earn 10 points else you get 5 points
-timer()
-
-
-score = 0
-
 
 # choice to exit or replay
 print(f"{Fore.YELLOW}Do you want to play again(YES/NO)?\n")
