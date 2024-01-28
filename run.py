@@ -1,13 +1,15 @@
-# my imports.
+# my imports,"these need to be installed"
 import colorama
+
+# my imports,"installation not needed"
 import time
 import pycountry
-import sys
 
+
+# for color and autorest to the orignal color.
 from colorama import Fore, Style
 
 colorama.init(autoreset=True)
-
 
 # introduction and rules
 print(f"\n{Fore.GREEN}WELCOME TO THE PYTHON QUIZ GAME\n")
@@ -164,29 +166,18 @@ not a primitive data type in Python?",
 # Start the quiz
 quiz(questions)
 
-
-# Ask the player if they want to play again
-repeat = input(f"{Fore.YELLOW}You wish to Replay, (YES/NO)? ").lower()
-print('\n******************************************************\n')
-# Restart the quiz
-if repeat == 'yes':
-    quiz(questions)
-else:
-    # Game over message
-    print(f"{Fore.YELLOW}Goodbye, see you soon!\n")
-    print('******************************************************\n')
-
-
-# Exit quiz at any time "am thinking of a button"
-def confirm_exit():
-    confirm = input('Are you sure you want to exit the quiz? \
-(yes/no:)').lower()
-    return confirm == "yes"
-
-
-# i wil see if i have to put it in the middle of my quiz
-exit_now = input("Type 'EXIT or E/e' to quit the quiz,\
-    or press Enter to contitue: ").lower()
-if exit_now == 'EXIT or E':
-    print('Exiting the quiz now...')
-    sys.exit()
+while True:
+    # Ask the player if they want to play again
+    repeat = input(f"{Fore.YELLOW}You wish to Replay, (YES/NO)? ").lower()
+    print('\n******************************************************\n')
+    # Restart the quiz
+    if repeat == 'yes':
+        quiz(questions)
+    elif repeat == 'no':
+        # Game over message
+        print(f"{Fore.YELLOW}Goodbye, see you soon!\n")
+        print('Exiting the quiz now... \n')
+        print(f"{Fore.YELLOW}\n********************************************\n")
+        break
+    else:
+        print(f"{Fore.RED}Invalid response. please type yes or no!\n")
