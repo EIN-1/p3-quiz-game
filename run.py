@@ -6,6 +6,7 @@ import time
 import pycountry
 
 import pyfiglet
+from pyfiglet import Figlet
 
 
 # for color and autorest to the orignal color.
@@ -13,14 +14,16 @@ from colorama import Fore, Style
 
 colorama.init(autoreset=True)
 
-# introduction and rules
-print(pyfiglet.figlet_format("PYTHON QUIZ GAME", justify="center"))
+# introduction( title and rules)
+print(pyfiglet.figlet_format("PYTHON QUIZ GAME", font='starwars',
+                             justify='center', width=110))
 print(f"{Fore.YELLOW}Please select the correct answer.\n\n"
-      f"{Fore.GREEN}# For each correctly answered question,"
-      "answered within 12 seconds, you will earn 10 points."
+      f"{Fore.GREEN}# For each correctly answered question,\n"
+      "answered within 12 seconds, you will earn 10 points.\n"
       "If it takes longer than that, you earn 5 points.\n"
-      "# After the game please place ANY-KEY to leave\n"
-      "# To contitue playing type yes\n")
+      "# After the game to exit type NO/no.\n"
+      "# To replay the game type YES/yes.\n"
+      "# At the end of the game you will get a final score.\n")
 print('******************************************************\n')
 
 
@@ -175,8 +178,9 @@ while True:
         quiz(questions)
     elif repeat == 'no':
         # Game over message
-        print(f"{Fore.YELLOW}Goodbye, see you soon!\n")
-        print('Exiting the quiz now... \n')
+        print(pyfiglet.figlet_format("Goodbye, see you soon!", font='slant',
+                                     justify='center', width=110))
+        print('\nExiting the quiz now... \n')
         print(f"{Fore.YELLOW}\n********************************************\n")
         break
     else:
