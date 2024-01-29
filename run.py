@@ -178,7 +178,7 @@ while True:
         quiz(questions)
     elif repeat == 'no':
         # Game over message
-        print(pyfiglet.figlet_format(" Goodbye, see you soon!", font='slant',
+        print(pyfiglet.figlet_format("Goodbye, see you soon!", font='slant',
                                      justify='center', width=65))
         print(f"{Fore.YELLOW}\n********************************************\n")
         print('\n   Exiting the quiz now... \n')
