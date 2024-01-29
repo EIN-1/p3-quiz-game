@@ -50,8 +50,8 @@ def username():
 
     # Ensure that username is not empty
     if user_name.strip():
-        print(f"{Fore.LIGHTGREEN_EX}Hello {user_name},\
-               welcome to our quiz game!\n")
+        print(f"{Fore.LIGHTGREEN_EX}Hello \
+{user_name}, welcome to our quiz game!\n")
         print('******************************************************\n')
 
 
@@ -102,7 +102,7 @@ def quiz(questions):
 
     # Print the final score after all questions have been answered
     print(f"{Fore.LIGHTBLUE_EX}You scored: {score}\
-{Fore.GREEN} out of {len(questions) * 10}{Style.RESET_ALL}\n")
+{Fore.LIGHTGREEN_EX} out of {len(questions) * 10}{Style.RESET_ALL}\n")
     print('*****************************************************\n')
 
 
@@ -171,8 +171,8 @@ quiz(questions)
 
 while True:
     # Ask the player if they want to play again
-    repeat = input(f"{Fore.LIGHTYELLOW_EX} ou wish \
-                   o Replay, (YES/NO)? ").lower()
+    repeat = input(f"{Fore.LIGHTYELLOW_EX}\
+you wish Replay, (YES/NO)? ").lower()
     print('\n**************************************************************\n')
     # Restart the quiz
     if repeat == 'yes':
