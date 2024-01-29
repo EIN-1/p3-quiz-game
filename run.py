@@ -16,8 +16,8 @@ colorama.init(autoreset=True)
 # introduction( title and rules)
 print(pyfiglet.figlet_format("  PYTHON QUIZ", font='starwars',
                              justify='center', width=70))
-print(f"{Fore.YELLOW}       Please select the correct answer.\n\n"
-      f"{Fore.GREEN}     # For each correctly answered question,\n"
+print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
+      f"{Fore.LIGHTGREEN_EX}     # For each correctly answered question,\n"
       "   answered within 12 seconds, you will earn 10 points.\n"
       "   If it takes longer than that, you earn 5 points.\n"
       "     # After the game to exit type NO/no.\n"
@@ -36,7 +36,7 @@ def location():
         # Look up the country by its name
         country = pycountry.countries.get(name=country_name)
         if country:
-            print(f"{Fore.GREEN}{country.name}\n")
+            print(f"{Fore.LIGHTGREEN_EX}{country.name}\n")
             print('******************************************************\n')
             break  # Exit the loop once a valid country is found
         else:
@@ -50,7 +50,8 @@ def username():
 
     # Ensure that username is not empty
     if user_name.strip():
-        print(f"{Fore.GREEN}Hello {user_name}, welcome to our quiz game!\n")
+        print(f"{Fore.LIGHTGREEN_EX}Hello {user_name},\
+               welcome to our quiz game!\n")
         print('******************************************************\n')
 
 
@@ -90,10 +91,10 @@ def quiz(questions):
         if int_answer == question["answer"]:
             # Changed to check if under or equal to 12 seconds
             if elapsed_time <= 12:
-                print(f"{Fore.GREEN} Correct! 10 points ")
+                print(f"{Fore.LIGHTGREEN_EX} Correct! 10 points ")
                 score += 10
             else:
-                print(f"{Fore.GREEN} Correct! 5 points ")
+                print(f"{Fore.LIGHTGREEN_EX} Correct! 5 points ")
                 score += 5
         else:
             print(f"{Fore.LIGHTRED_EX} Incorrect! ")
@@ -170,8 +171,9 @@ quiz(questions)
 
 while True:
     # Ask the player if they want to play again
-    repeat = input(f"{Fore.YELLOW}  You wish to Replay, (YES/NO)? ").lower()
-    print('\n******************************************************\n')
+    repeat = input(f"{Fore.LIGHTYELLOW_EX} ou wish \
+                   o Replay, (YES/NO)? ").lower()
+    print('\n**************************************************************\n')
     # Restart the quiz
     if repeat == 'yes':
         quiz(questions)
@@ -179,7 +181,7 @@ while True:
         # Game over message
         print(pyfiglet.figlet_format("Goodbye, see you soon!", font='slant',
                                      justify='center', width=65))
-        print(f"{Fore.YELLOW}\n********************************************\n")
+        print(f"{Fore.LIGHTYELLOW_EX}\n************************************\n")
         print('\n   Exiting the quiz now... \n')
 
         break
