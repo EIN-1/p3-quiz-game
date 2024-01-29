@@ -5,6 +5,8 @@ import colorama
 import time
 import pycountry
 
+import pyfiglet
+
 
 # for color and autorest to the orignal color.
 from colorama import Fore, Style
@@ -12,9 +14,7 @@ from colorama import Fore, Style
 colorama.init(autoreset=True)
 
 # introduction and rules
-print(f"\n{Fore.GREEN}WELCOME TO THE PYTHON QUIZ GAME\n")
-print('******************************************************\n')
-
+print(pyfiglet.figlet_format("PYTHON QUIZ GAME", justify="center"))
 print(f"{Fore.YELLOW}Please select the correct answer.\n\n"
       f"{Fore.GREEN}# For each correctly answered question,"
       "answered within 12 seconds, you will earn 10 points."
