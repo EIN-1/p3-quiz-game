@@ -1,6 +1,9 @@
 <body>
-    <button onclick="window.location.reload()">Run Program</button>
-    <div id="terminal"></div>
+    <div id="contaniner">
+        <h1>Python Quiz</h1>
+        <button onclick="window.location.reload()">Run Program</button>
+        <div id="terminal"></div>
+    </div>
 
     <script>
         var term = new Terminal({
@@ -24,4 +27,5 @@
         // Set focus in the terminal
         document.getElementsByClassName("xterm-helper-textarea")[0].focus();
     </script>
+
 </body>
