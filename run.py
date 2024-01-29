@@ -14,7 +14,7 @@ import pycountry
 colorama.init(autoreset=True)
 
 # introduction( title and rules)
-print(pyfiglet.figlet_format("PYTHON QUIZ", font='starwars',
+print(pyfiglet.figlet_format("  PYTHON QUIZ", font='starwars',
                              justify='center', width=70))
 print(f"{Fore.YELLOW}       Please select the correct answer.\n\n"
       f"{Fore.GREEN}     # For each correctly answered question,\n"
@@ -79,7 +79,7 @@ def quiz(questions):
         elapsed_time = 12
 
         while True:
-            answer = input(f"{Fore.LIGHTBLUE_EX}    Please answer? ")
+            answer = input(f"{Fore.LIGHTBLUE_EX}  Please answer?  ")
             (f"(1-{len(question['options'])}): ")
             int_answer = validate(answer, len(question["options"]))
             if int_answer is not None:
@@ -91,19 +91,19 @@ def quiz(questions):
         if int_answer == question["answer"]:
             # Changed to check if under or equal to 12 seconds
             if elapsed_time <= 12:
-                print(f"{Fore.GREEN}    Correct! 10 points")
+                print(f"{Fore.GREEN} Correct! 10 points ")
                 score += 10
             else:
-                print(f"{Fore.GREEN}    Correct! 5 points")
+                print(f"{Fore.GREEN} Correct! 5 points ")
                 score += 5
         else:
-            print(f"{Fore.LIGHTRED_EX}  Incorrect!")
+            print(f"{Fore.LIGHTRED_EX} Incorrect! ")
         print('****************************************************\n')
 
     # Print the final score after all questions have been answered
     print(f"{Fore.LIGHTBLUE_EX}You scored: {score}\
 {Fore.GREEN} out of {len(questions) * 10}{Style.RESET_ALL}\n")
-    print('*****************************************************\n\n')
+    print('*****************************************************\n')
 
 
 # Call the location and username functions
@@ -178,11 +178,11 @@ while True:
         quiz(questions)
     elif repeat == 'no':
         # Game over message
-        print(pyfiglet.figlet_format("Goodbye, see you soon!", font='slant',
+        print(pyfiglet.figlet_format(" Goodbye, see you soon!", font='slant',
                                      justify='center', width=65))
         print(f"{Fore.YELLOW}\n********************************************\n")
-        print('\nExiting the quiz now... \n')
+        print('\n   Exiting the quiz now... \n')
 
         break
     else:
-        print(f"{Fore.LIGHTRED_EX}Invalid response. please type yes or no!\n")
+        print(f"{Fore.LIGHTRED_EX} Invalid response. please type yes or no!\n")
