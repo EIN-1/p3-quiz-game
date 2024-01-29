@@ -60,8 +60,7 @@ def validate(answer, num_options):
         int_answer = int(answer)
         if 1 <= int_answer <= num_options:
             return int_answer
-    print(f"{Fore.LIGHTRED_EX}  Error, please enter a"
-          "valid number (1-{num_options})")
+    print(f"{Fore.LIGHTRED_EX}Error, enter a valid number (1-{num_options})")
     return None
 
 
