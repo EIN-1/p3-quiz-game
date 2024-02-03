@@ -66,8 +66,14 @@ New users are encouraged to experiment with the computer-based version of the py
 Make the game more challenging by introducing multiple difficulty levels for the user to choose to play and implementing a scoring leaderboard. Moreover, I intend to enhance the website's user appeal through the implementation of aesthetic styling and a structured layout. To achieve this objective, I need to use a web framework such as Flask or Django, which allows me serve web pages and static assets like CSS files. 
 
 [Back to top](<#table-of-contents>)
+
+## Design
 ### Mock-up:
-![main outlook](image.png)
+![I am responsive](image.png)
+
+### Flowchart:
+!I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhance the overall structure.
+![Flowchart](image.png)
 
 [Back to top](<#table-of-contents>)
 

@@ -2,13 +2,12 @@
 <html lang="en">
 <head></head>
 
-<body>
-    <div id="contaniner">
-        <h1>Python Quiz</h1>
-        <button onclick="window.location.reload()">Run Program</button>
-        <div id="terminal"></div>
+<body id="container">
+    <h1>Python Quiz</h1>
+    <button onclick="window.location.reload()">Run Program</button>
+    <div id="terminal"></div>
 
-        <script>
+    <script>
             var term = new Terminal({
                 cols: 80,
                 rows: 24
@@ -29,7 +28,5 @@
             };
             // Set focus in the terminal
             document.getElementsByClassName("xterm-helper-textarea")[0].focus();
-        </script> 
-    </div>
-
+    </script> 
 </body>
