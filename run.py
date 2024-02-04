@@ -14,7 +14,7 @@ import pycountry
 colorama.init(autoreset=True)
 
 # introduction( title and rules)
-heading = pyfiglet.figlet_format("PYTHON QUIZ", font='anishadow',
+heading = pyfiglet.figlet_format("PYTHON QUIZ", font='big',
                                  justify='center', width=70)
 print(f"{Fore.LIGHTGREEN_EX} + heading")
 
