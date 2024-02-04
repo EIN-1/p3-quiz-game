@@ -14,7 +14,7 @@ import pycountry
 colorama.init(autoreset=True)
 
 # introduction( title and rules)
-print(pyfiglet.figlet_format("  PYTHON QUIZ", font='starwars',
+print(pyfiglet.figlet_format("PYTHON QUIZ", font='starwars',
                              justify='center', width=70))
 print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
       f"{Fore.LIGHTGREEN_EX}     # For each correctly answered question,\n"
@@ -31,22 +31,22 @@ print('******************************************************\n')
 def location():
     while True:
         # Ask the user for their country
-        country_name = input('  Which country are you in? ')
+        country_name = input('Which country are you in? ')
 
         # Look up the country by its name
         country = pycountry.countries.get(name=country_name)
         if country:
-            print(f"    {Fore.LIGHTGREEN_EX}{country.name}\n")
+            print(f"  {Fore.LIGHTGREEN_EX}{country.name}\n")
             print('******************************************************\n')
             break  # Exit the loop once a valid country is found
         else:
-            print( f"   {Fore.LIGHTRED_EX}  Error, type in your country.\n")
+            print( f"  {Fore.LIGHTRED_EX}  Error, type in your country.\n")
             print('******************************************************\n')
 
 
 # User name function defined
 def username():
-    user_name = input(' What is your name? ')
+    user_name = input('What is your name? ')
 
     # Ensure that username is not empty
     if user_name.strip():
@@ -79,7 +79,7 @@ def quiz(questions):
         elapsed_time = 12
 
         while True:
-            answer = input(f"{Fore.CYAN}  Please answer?  ")
+            answer = input(f"{Fore.BLUE}  Please answer?  ")
             (f"(1-{len(question['options'])}): ")
             int_answer = validate(answer, len(question["options"]))
             if int_answer is not None:
@@ -101,7 +101,7 @@ def quiz(questions):
         print('****************************************************\n')
 
     # Print the final score after all questions have been answered
-    print(f"{Fore.CYAN}You scored: {score}\
+    print(f"{Fore.BLUE}You scored: {score}\
 {Fore.LIGHTGREEN_EX} out of {len(questions) * 10}\n")
     print('*****************************************************\n')
 
