@@ -36,11 +36,11 @@ def location():
         # Look up the country by its name
         country = pycountry.countries.get(name=country_name)
         if country:
-            print(f"{Fore.LIGHTGREEN_EX}{country.name}\n")
+            print(f"    {Fore.LIGHTGREEN_EX}{country.name}\n")
             print('******************************************************\n')
             break  # Exit the loop once a valid country is found
         else:
-            print(f"{Fore.LIGHTRED_EX}  Error, type in your country.\n")
+            print( f"   {Fore.LIGHTRED_EX}  Error, type in your country.\n")
             print('******************************************************\n')
 
 
@@ -50,7 +50,7 @@ def username():
 
     # Ensure that username is not empty
     if user_name.strip():
-        print(f"{Fore.LIGHTGREEN_EX}Hello \
+        print(f"    {Fore.LIGHTGREEN_EX}Hello \
 {user_name}, welcome to our quiz game!\n")
         print('******************************************************\n')
 
@@ -79,7 +79,7 @@ def quiz(questions):
         elapsed_time = 12
 
         while True:
-            answer = input(f"{Fore.LIGHTBLUE_EX}  Please answer?  ")
+            answer = input(f"{Fore.CYAN}  Please answer?  ")
             (f"(1-{len(question['options'])}): ")
             int_answer = validate(answer, len(question["options"]))
             if int_answer is not None:
@@ -101,8 +101,8 @@ def quiz(questions):
         print('****************************************************\n')
 
     # Print the final score after all questions have been answered
-    print(f"{Fore.LIGHTBLUE_EX}You scored: {score}\
-{Fore.LIGHTGREEN_EX} out of {len(questions) * 10}{Style.RESET_ALL}\n")
+    print(f"{Fore.CYAN}You scored: {score}\
+{Fore.LIGHTGREEN_EX} out of {len(questions) * 10}\n")
     print('*****************************************************\n')
 
 
