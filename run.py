@@ -181,11 +181,13 @@ you wish Replay, (YES/NO)? ").lower()
         quiz(questions)
     elif repeat == 'no':
         # Game over message
-        print(pyfiglet.figlet_format("Goodbye, see you soon!", font='slant',
-                                     justify='center', width=65))
-        print(f"{Fore.LIGHTYELLOW_EX}\n************************************\n")
+        goodbye_text = pyfiglet.figlet_format("Goodbye, see you soon!",
+                                              font='slant', justify='center',
+                                              width=65)
+        print(Fore.LIGHTGREEN_EX + goodbye_text)
+        print(f"{Fore.LIGHTYELLOW_EX}\n**************************************\
+    ***************\n")
         print('\n   Exiting the quiz now... \n')
-
         break
     else:
         print(f"{Fore.LIGHTRED_EX} Invalid response. please type yes or no!\n")
