@@ -7,6 +7,9 @@ import pyfiglet
 from pyfiglet import Figlet
 from pyfiglet import fonts
 
+import termcolor
+from termcolor import color
+
 # my imports,"installation not needed"
 import time
 import pycountry
@@ -14,9 +17,10 @@ import pycountry
 colorama.init(autoreset=True)
 
 # introduction( title and rules)
-print((colored(pyfiglet.figlet_format("PYTHON QUIZ", font='anishadow',
-                                      color='green', justify='center',
-                                      width=70))))
+heading = pyfiglet.figlet_format("PYTHON QUIZ", font='anishadow',
+                                 justify='center', width=70)
+print(f"{Fore.LIGHTGREEN_EX} + heading")
+
 print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
       f"{Fore.LIGHTGREEN_EX}     # For each correctly answered question,\n"
       "   answered within 12 seconds, you will earn 10 points.\n"
