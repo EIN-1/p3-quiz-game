@@ -16,7 +16,7 @@ colorama.init(autoreset=True)
 # introduction( title and rules)
 heading = pyfiglet.figlet_format("PYTHON QUIZ", font='big',
                                  justify='center', width=70)
-print(f"{Fore.LIGHTGREEN_EX} + heading")
+print(Fore.LIGHTGREEN_EX + heading)
 
 print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
       f"{Fore.LIGHTGREEN_EX}     # For each correctly answered question,\n"
