@@ -7,9 +7,6 @@ import pyfiglet
 from pyfiglet import Figlet
 from pyfiglet import fonts
 
-import termcolor
-from termcolor import color
-
 # my imports,"installation not needed"
 import time
 import pycountry
