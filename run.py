@@ -184,7 +184,7 @@ you wish Replay, (YES/NO)? ").lower()
         goodbye_text = pyfiglet.figlet_format("Goodbye, see you soon!",
                                               font='slant', justify='center',
                                               width=65)
-        print(Fore.LIGHTGREEN_EX + goodbye_text)
+        print(Fore.LIGHTRED_EX + goodbye_text)
         print(f"{Fore.LIGHTYELLOW_EX}\n**************************************\
     ***************\n")
         print('\n   Exiting the quiz now... \n')
