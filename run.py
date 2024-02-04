@@ -176,7 +176,7 @@ while True:
     repeat = input(f"{Fore.LIGHTYELLOW_EX}\
 you wish Replay, (YES/NO)? ").lower()
     print('\n*********************************************\
-***************************\n')
+********************************\n')
     # Restart the quiz
     if repeat == 'yes':
         quiz(questions)
@@ -187,7 +187,7 @@ you wish Replay, (YES/NO)? ").lower()
                                               width=65)
         print(Fore.LIGHTRED_EX + goodbye_text)
         print(f"{Fore.LIGHTYELLOW_EX}\n**************************************\
-***********************************\n")
+****************************************\n")
         print('\n   Exiting the quiz now... \n')
         break
     else:
