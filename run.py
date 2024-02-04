@@ -14,8 +14,9 @@ import pycountry
 colorama.init(autoreset=True)
 
 # introduction( title and rules)
-print(pyfiglet.figlet_format("PYTHON QUIZ", font='starwars',
-                             justify='center', width=70))
+print((colored(pyfiglet.figlet_format("PYTHON QUIZ", font='starwars',
+                                      color='green', justify='center',
+                                      width=70))))
 print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
       f"{Fore.LIGHTGREEN_EX}     # For each correctly answered question,\n"
       "   answered within 12 seconds, you will earn 10 points.\n"
@@ -36,11 +37,11 @@ def location():
         # Look up the country by its name
         country = pycountry.countries.get(name=country_name)
         if country:
-            print(f"  {Fore.LIGHTGREEN_EX}{country.name}\n")
+            print(f" {Fore.LIGHTGREEN_EX}{country.name}\n")
             print('******************************************************\n')
             break  # Exit the loop once a valid country is found
         else:
-            print( f"  {Fore.LIGHTRED_EX}  Error, type in your country.\n")
+            print(f" {Fore.LIGHTRED_EX}  Error, type in your country.\n")
             print('******************************************************\n')
 
 
