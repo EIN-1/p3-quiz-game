@@ -14,7 +14,7 @@ import pycountry
 colorama.init(autoreset=True)
 
 # introduction( title and rules)
-print((colored(pyfiglet.figlet_format("PYTHON QUIZ", font='starwars',
+print((colored(pyfiglet.figlet_format("PYTHON QUIZ", font='anishadow',
                                       color='green', justify='center',
                                       width=70))))
 print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
