@@ -17,7 +17,6 @@ colorama.init(autoreset=True)
 heading = pyfiglet.figlet_format("PYTHON QUIZ", font='big',
                                  justify='center', width=70)
 print(Fore.LIGHTGREEN_EX + heading)
-
 print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
       f"{Fore.LIGHTGREEN_EX}     # For each correctly answered question,\n"
       "   answered within 12 seconds, you will earn 10 points.\n"
@@ -25,7 +24,8 @@ print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
       "     # After the game to exit type NO/no.\n"
       "     # To replay the game type YES/yes.\n"
       "     # At the end of the game you will get a final score.\n")
-print('******************************************************\n')
+print('\n*********************************************\
+********************************\n')
 
 
 # define location function
@@ -39,11 +39,13 @@ def location():
         country = pycountry.countries.get(name=country_name)
         if country:
             print(f" {Fore.LIGHTGREEN_EX}{country.name}\n")
-            print('******************************************************\n')
+            print('\n*********************************************\
+********************************\n')
             break  # Exit the loop once a valid country is found
         else:
             print(f" {Fore.LIGHTRED_EX}  Error, type in your country.\n")
-            print('******************************************************\n')
+            print('\n*********************************************\
+********************************\n')
 
 
 # User name function defined
@@ -54,7 +56,8 @@ def username():
     if user_name.strip():
         print(f"    {Fore.LIGHTGREEN_EX}Hello \
 {user_name}, welcome to our quiz game!\n")
-        print('******************************************************\n')
+        print('\n*********************************************\
+********************************\n')
 
 
 # Define to validate the answer.
@@ -100,12 +103,14 @@ def quiz(questions):
                 score += 5
         else:
             print(f"{Fore.LIGHTRED_EX} Incorrect! ")
-        print('****************************************************\n')
+        print('\n*********************************************\
+********************************\n')
 
     # Print the final score after all questions have been answered
     print(f"{Fore.LIGHTBLUE_EX}You scored: {score}\
 {Fore.LIGHTGREEN_EX} out of {len(questions) * 10}\n")
-    print('*****************************************************\n')
+    print('\n*********************************************\
+********************************\n')
 
 
 # Call the location and username functions
