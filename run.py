@@ -175,7 +175,8 @@ while True:
     # Ask the player if they want to play again
     repeat = input(f"{Fore.LIGHTYELLOW_EX}\
 you wish Replay, (YES/NO)? ").lower()
-    print('\n**************************************************************\n')
+    print('\n*********************************************\
+**********************\n')
     # Restart the quiz
     if repeat == 'yes':
         quiz(questions)
