@@ -69,11 +69,11 @@ Make the game more challenging by introducing multiple difficulty levels for the
 
 ## Design
 ### Mock-up:
-![I am responsive](image.png)
+![I am responsive](Documents/am responsive.png) live link (https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/)
 
 ### Flowchart:
 !I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhance the overall structure.
-![Flowchart](image.png)
+![Flowchart](Documents/flowchart.png)
 
 [Back to top](<#table-of-contents>)
 
