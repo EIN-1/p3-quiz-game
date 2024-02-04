@@ -79,7 +79,7 @@ def quiz(questions):
         elapsed_time = 12
 
         while True:
-            answer = input(f"{Fore.BLUE}  Please answer?  ")
+            answer = input(f"{Fore.LIGHTBLUE_EX}  Please answer?  ")
             (f"(1-{len(question['options'])}): ")
             int_answer = validate(answer, len(question["options"]))
             if int_answer is not None:
@@ -101,7 +101,7 @@ def quiz(questions):
         print('****************************************************\n')
 
     # Print the final score after all questions have been answered
-    print(f"{Fore.BLUE}You scored: {score}\
+    print(f"{Fore.LIGHTBLUE_EX}You scored: {score}\
 {Fore.LIGHTGREEN_EX} out of {len(questions) * 10}\n")
     print('*****************************************************\n')
 
