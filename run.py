@@ -3,6 +3,7 @@ import colorama
 # for color and autorest to the orignal color.
 from colorama import Fore, Style
 # ASCII art text.
+import random
 import pyfiglet
 from pyfiglet import Figlet
 from pyfiglet import fonts
@@ -73,8 +74,12 @@ def validate(answer, num_options):
 # The main quiz function
 def quiz(questions):
     score = 0
+    # Shuffle the questions randomly
+    random.shuffle(questions)
     for question in questions:
         print(question["question"])
+        # Shuffle options for each question
+        random.shuffle(question["options"])
         for option in question["options"]:
             print(option)
 
@@ -83,18 +88,27 @@ def quiz(questions):
         # I set elapsed_time to 12 seconds
         elapsed_time = 12
 
+        # This while loop continuously executes until a valid answer is given
         while True:
-            answer = input(f"{Fore.LIGHTBLUE_EX}  Please answer?  ")
-            (f"(1-{len(question['options'])}): ")
+            answer = input(f"{Fore.LIGHTBLUE_EX}  Please answer?\
+                           (1-{len(question['options'])}): ")
+        # The validate() takes the user's answer and the number\
+        # of options for the current question as arguments.\
+        # It returns the integer representation of the answer.
             int_answer = validate(answer, len(question["options"]))
+    # Checks if the int_answer is not None, indicating that a valid answer\
+    # was provided. If it is not None, it marks the end of the timer and \
+    # calculates the elapsed time
             if int_answer is not None:
+
                 # End the timer and calculate elapsed time
                 end_time = time.time()
                 elapsed_time = end_time - start_time
                 break
 
         if int_answer == question["answer"]:
-            # Changed to check if under or equal to 12 seconds
+            # Check if answered under or equal to 12 seconds else\
+            # you will get 5 points.
             if elapsed_time <= 12:
                 print(f"{Fore.LIGHTGREEN_EX} Correct! 10 points ")
                 score += 10
@@ -156,8 +170,7 @@ not a primitive data type in Python?",
             "3) It refers to the derived class",
             "4) It refers to the static class"
         ],
-        "answer":
-        1
+        "answer": 1
     },
     {
         "question":
