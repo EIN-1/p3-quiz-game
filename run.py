@@ -90,15 +90,17 @@ def quiz(questions):
 
         # This while loop continuously executes until a valid answer is given
         while True:
-            answer = input(f"{Fore.LIGHTBLUE_EX}  Please answer?\
-                           (1-{len(question['options'])}): ")
-        # The validate() takes the user's answer and the number\
-        # of options for the current question as arguments.\
-        # It returns the integer representation of the answer.
+            answer = input(f"{Fore.LIGHTBLUE_EX}\
+Please answer? (1-{len(question['options'])}): ")
+
+            # The validate() takes the user's answer and the number\
+            # of options for the current question as arguments.\
+            # It returns the integer representation of the answer.
             int_answer = validate(answer, len(question["options"]))
-    # Checks if the int_answer is not None, indicating that a valid answer\
-    # was provided. If it is not None, it marks the end of the timer and \
-    # calculates the elapsed time
+
+            # Checks if the int_answer is not None, indicating that\
+            # a valid answer was provided. If it is not None, it marks the end\
+            # of the timer and calculates the elapsed time.
             if int_answer is not None:
 
                 # End the timer and calculate elapsed time
