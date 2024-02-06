@@ -78,8 +78,8 @@ def quiz(questions):
     random.shuffle(questions)
     for question in questions:
         print(question["question"])
-        # Shuffle options for each question
-        random.shuffle(question["options"])
+        #options for each question will be printed
+        (question["options"])
         for option in question["options"]:
             print(option)
 
