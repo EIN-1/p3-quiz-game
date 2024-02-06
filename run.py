@@ -22,9 +22,9 @@ print(f"{Fore.LIGHTYELLOW_EX}       Please select the correct answer.\n\n"
       f"{Fore.LIGHTGREEN_EX}     # For each correctly answered question,\n"
       "   answered within 12 seconds, you will earn 10 points.\n"
       "   If it takes longer than that, you earn 5 points.\n"
+      "     # At the end of the game you will get a final score.\n"
       "     # After the game to exit type NO/no.\n"
-      "     # To replay the game type YES/yes.\n"
-      "     # At the end of the game you will get a final score.\n")
+      "     # To replay the game type YES/yes.\n")
 print('\n*********************************************\
 ********************************\n')
 
