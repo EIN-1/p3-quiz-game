@@ -1,4 +1,4 @@
-![P3 Python quiz](Documents/header.png)
+![P3 Python quiz](Documents/banner.png)
 * Live deployment [P3 Python quiz](https://python-quiz-da8ccddf3267.herokuapp.com/) 
 
 Python quiz game can be a fun and effective way for users to learn more about the language. Here's a general outline of how I have structure my quiz game:
