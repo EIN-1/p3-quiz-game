@@ -73,7 +73,7 @@ Make the game more challenging by introducing multiple difficulty levels for the
 
 ### Flowchart:
 !I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhance the overall structure.
-![Flowchart](Documents/flowchart.png)
+![Flowchart](Documents/py.flowchart.png)
 
 [Back to top](<#table-of-contents>)
 
@@ -82,16 +82,16 @@ Make the game more challenging by introducing multiple difficulty levels for the
 ### Existing Features:
 
 #### Landing Page:
-![Landing page](image.png)
+![Landing page](Documents/header.png)
 The landing page displays the game's title along with the game rules. To add an element of visual appeal, the text is rendered in red color, and the sentences are animated using the typewriter function. This approach is aimed at enriching the user's experience.
 
 ### Game Rules
 Players will review the game rules before beginning the P3 python quiz game. They can do so by scrolling.
-* ![Game Rules](image.png)
+* ![Game Rules](Documents/rules.png)
 
 ### Enter Location
 Players will type in the conutry they are currently located, if the country does not exist they will be prompted with an invalid message until the player enters the correct country.
-* ![Enter country current location](image.png)
+* ![Enter country current location](Documents/location and username.png)
 
 ### Enter Username
 Beneath the rules section, a prompt awaits the user, inviting them to input their name or choose to play anonymously to initiate the game. An image illustrating when the user gives their name's input can be found above, in the "Game Rules" picture.
@@ -100,17 +100,17 @@ Beneath the rules section, a prompt awaits the user, inviting them to input thei
 ### Possible Outcomes:
 The player may encounter three potential scenarios when selecting an answer form the given options: 
 + The `correct answer`, the `incorrect answer` and the `invalid input` from the given options this is to avoid little mistakes that can be done by the user enhencing user's experience.
-  * ![Correct](image.png)
-  * ![Incorrect](image.png)
+  * ![Correct](Documents/correct or incorrect answer.png)
+  * ![Incorrect](Documents/correct or incorrect answer.png)
 + If the input answer is not from the specified option then the player will be prompted with an invalid or error message until the player enters the correct input number provided.
-  * ![invalid input](image.png)
+  * ![invalid input](Documents/invalid input .png)
 
 #### Reply or Exit
 After the game, regardless of whether the player wins or loses, a prompt will appear asking if they wish to continue or end the game `Reply` or `Exit`. The player can choose to keep playing or quit the game by typing yes for replay and no for exit.  
     When you type yes to replay the game, it starts from the question.
-* ![Reply the game](image.png)
+* ![Reply the game](Documents/replay.png)
     When you type no to exit the game, it sends a goodbye message then it exits this is for user interface
-* ![Exit the game](image.png)
+* ![Exit the game](/workspaces/p3-quiz-game/Documents/goodbye.png)
 
 ### Features Left to Implement
 - To make the questions random per game so when the user replays they are not in the same order as before.
@@ -124,13 +124,17 @@ After the game, regardless of whether the player wins or loses, a prompt will ap
 ### Validator Testing
 * [CI PEP8 Online](https://pep8ci.herokuapp.com/). 
    * No errors were returned.
-![PEP8 CI Validation](image.png)
+![PEP8 CI Validation](Documents/pep8 validator.png)
+
+* [Lighthouse](https://pep8ci.herokuapp.com/).
+    * in general it is good
+![Lighthouse testing](Documents/lightlight house.png)
 
 ### Manual Testing
 Any input that is not a digit and a number from the given options they will be prompted with an invalid message until the player enters the correct input.
-* ![Invalid Input ](image.png)
+* ![Invalid Input ](Documents/invalid input .png)
 
-Any input other than a yes or noletter will be considered invalid at the end of the game.
+Any input other than a yes or no letter will be considered invalid at the end of the game.
 * ![Invalid choise at the end](image.png)
 
 ### Bugs
