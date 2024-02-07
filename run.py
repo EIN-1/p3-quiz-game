@@ -194,7 +194,7 @@ quiz(questions)
 while True:
     # Ask the player if they want to play again
     repeat = input(f"{Fore.LIGHTYELLOW_EX}\
-you wish Replay, (YES/NO)? ").lower()
+ Do you wish to Replay, (YES/NO)? ").lower()
     print('\n*********************************************\
 ********************************\n')
     # Restart the quiz
@@ -202,7 +202,7 @@ you wish Replay, (YES/NO)? ").lower()
         quiz(questions)
     elif repeat == 'no':
         # Game over message
-        goodbye_text = pyfiglet.figlet_format("Goodbye, see you soon!",
+        goodbye_text = pyfiglet.figlet_format(" Goodbye, see you soon!",
                                               font='slant', justify='center',
                                               width=65)
         print(Fore.LIGHTRED_EX + goodbye_text)
