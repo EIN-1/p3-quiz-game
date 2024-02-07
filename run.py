@@ -51,14 +51,20 @@ def location():
 
 # User name function defined
 def username():
-    user_name = input('What is your name? ')
+    while True:
+        user_name = input('What is your name? ')
 
     # Ensure that username is not empty
-    if user_name.strip():
-        print(f"    {Fore.LIGHTGREEN_EX}Hello \
+        if user_name.strip() == "":
+            print("Error: Please type in your username")
+        elif user_name.strip() == "":
+            print("Error: username can not be whitespace")
+        else:
+            print(f"    {Fore.LIGHTGREEN_EX}Hello \
 {user_name}, welcome to our quiz game!\n")
-        print('\n*********************************************\
+            print('\n*********************************************\
 ********************************\n')
+        break
 
 
 # Define to validate the answer.

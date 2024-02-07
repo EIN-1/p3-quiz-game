@@ -1,5 +1,6 @@
-![Python quiz](Documents/am responsive.png)
-* I used [am I responsive](https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/)
+![game view](Documents/banner.png)
+* I used [am I responsive](https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/) to see how it looks on different products 
+
 * Live deployment [Python quiz](https://python-quiz-da8ccddf3267.herokuapp.com/) 
 
 Python quiz game can be a fun and effective way for users to learn more about the language. Here's a general outline of how I have structure my quiz game:
@@ -73,7 +74,8 @@ Make the game more challenging by introducing multiple difficulty levels for the
 ![I am responsive](Documents/am responsive.png) live link (https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/)
 
 ### Flowchart:
-!I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhance the overall structure.
+I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhance the overall structure.
+
 ![Flowchart](Documents/py.flowchart.png)
 
 [Back to top](<#table-of-contents>)
