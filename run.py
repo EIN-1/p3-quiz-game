@@ -36,7 +36,7 @@ def location():
         # Ask the user for their country
         country_name = input('Which country are you in? ')
 
-        # Look up the country by its name
+        # Look up the country by its correct name
         country = pycountry.countries.get(name=country_name)
         if country:
             print(f" {Fore.LIGHTGREEN_EX}{country.name}\n")
@@ -44,6 +44,7 @@ def location():
 ********************************\n')
             break  # Exit the loop once a valid country is found
         else:
+            # if the country is not correct, it will print this Error
             print(f" {Fore.LIGHTRED_EX}  Error, type in your country.\n")
             print('\n*********************************************\
 ********************************\n')
@@ -55,16 +56,17 @@ def username():
         user_name = input('What is your name? ')
 
     # Ensure that username is not empty
-        if user_name.strip() == "":
-            print("Error: Please type in your username")
-        elif user_name.strip() == "":
-            print("Error: username can not be whitespace")
-        else:
+        if user_name.strip() != "":
             print(f"    {Fore.LIGHTGREEN_EX}Hello \
 {user_name}, welcome to our quiz game!\n")
             print('\n*********************************************\
 ********************************\n')
-        break
+            break # Exit the loop once username is given
+        else:
+            # if the username is empty, it will print this Error
+            print(f" {Fore.LIGHTRED_EX}Error: Please type your username.\n")
+            print('\n*********************************************\
+********************************\n')
 
 
 # Define to validate the answer.
@@ -213,8 +215,8 @@ while True:
                                               width=65)
         print(Fore.LIGHTRED_EX + goodbye_text)
         print(f"{Fore.LIGHTYELLOW_EX}\n**************************************\
-****************************************\n")
-        print('\n   Exiting the quiz now... \n')
+****************************************")
+        print('\n   Exiting the quiz now... ')
         break
     else:
         print(f"{Fore.LIGHTRED_EX} Invalid response. please type yes or no!\n")
