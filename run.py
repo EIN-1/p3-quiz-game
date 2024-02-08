@@ -203,9 +203,7 @@ while True:
     # Ask the player if they want to play again
     repeat = input(f"{Fore.LIGHTYELLOW_EX}\
  Do you wish to Replay, (YES/NO)? ").lower()
-    print('\n*********************************************\
-********************************\n')
-    # Restart the quiz
+    # Repeat the quiz if yes and exit if no is typed
     if repeat == 'yes':
         quiz(questions)
     elif repeat == 'no':
@@ -214,7 +212,7 @@ while True:
                                               font='slant', justify='center',
                                               width=65)
         print(Fore.LIGHTRED_EX + goodbye_text)
-        print(f"{Fore.LIGHTYELLOW_EX}\n**************************************\
+        print(f"{Fore.LIGHTYELLOW_EX}**************************************\
 ****************************************")
         print('\n   Exiting the quiz now... ')
         break
