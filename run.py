@@ -216,7 +216,7 @@ while True:
         print(Fore.LIGHTRED_EX + goodbye_text)
         print(f"{Fore.LIGHTYELLOW_EX}**************************************\
 ****************************************")
-        print('\n   Exiting the quiz now... \n')
+        print('   Exiting the quiz now... \n')
         break
     else:
         print(f"{Fore.LIGHTRED_EX} Invalid response. please type yes or no!")
