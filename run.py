@@ -191,7 +191,7 @@ not a primitive data type in Python?",
     {
         "question": "How do you comment a line of code in Python?",
         "options":
-        ["1) // comment", "2) /* comment */", "3) # comment", "4) n"],
+        ["1) // comment", "2) /* comment */", "3) # comment", "4) none"],
         "answer": 3
     },
 ]
@@ -203,7 +203,9 @@ while True:
     # Ask the player if they want to play again
     repeat = input(f"{Fore.LIGHTYELLOW_EX}\
  Do you wish to Replay, (YES/NO)? ").lower()
-    # Repeat the quiz if yes and exit if no is typed
+    print('\n*********************************************\
+********************************')
+    # Reapet quiz if yes and exit if no is typed
     if repeat == 'yes':
         quiz(questions)
     elif repeat == 'no':
@@ -214,7 +216,7 @@ while True:
         print(Fore.LIGHTRED_EX + goodbye_text)
         print(f"{Fore.LIGHTYELLOW_EX}**************************************\
 ****************************************")
-        print('\n   Exiting the quiz now... ')
+        print('\n   Exiting the quiz now... \n')
         break
     else:
-        print(f"{Fore.LIGHTRED_EX} Invalid response. please type yes or no!\n")
+        print(f"{Fore.LIGHTRED_EX} Invalid response. please type yes or no!")
