@@ -62,7 +62,7 @@ def username():
 {user_name}, welcome to our quiz game!\n")
             print('\n*********************************************\
 ********************************\n')
-            break # Exit the loop once username is given
+            break  # Exit the loop once username is given
         else:
             # if the username is empty, it will print this Error
             print(f" {Fore.LIGHTRED_EX}Error: Please type your username.\n")
@@ -87,7 +87,7 @@ def quiz(questions):
     random.shuffle(questions)
     for question in questions:
         print(question["question"])
-        #options for each question will be printed
+        # options for each question will be printed
         (question["options"])
         for option in question["options"]:
             print(option)
