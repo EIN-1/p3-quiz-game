@@ -18,7 +18,7 @@ colorama.init(autoreset=True)
 heading = pyfiglet.figlet_format("PYTHON QUIZ", font='big',
                                  justify='center', width=70)
 print(Fore.LIGHTGREEN_EX + heading)
-print(f"{Fore.LIGHTYELLOW_EX}                  ***GAME RULES***\n"
+print(f"{Fore.LIGHTYELLOW_EX}                  *** GAME RULES ***\n"
       f"{Fore.LIGHTGREEN_EX}     # Please select the correct answer.\n"
       "     # For each correctly answered question,\n"
       "   answered within 12 seconds, you will earn 10 points.\n"
