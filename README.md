@@ -45,6 +45,8 @@ Python quiz game is a fun and effective way for users to learn more about the la
 + [Deployment](#deployment "Deployment")
     + [Version Control](#version-control "Version Control")
     + [Page Deployment](#page-deployment "Page Deployment")
+    + [Frok](#fork "Fork")
+    + [Clone](#clone "Clone")
 + [Credits](#credits "Credits")
   + [Content](#content "Content")
   + [Acknowledgements](#acknowledgements "Acknowledgements")
@@ -217,7 +219,7 @@ The version control was maintained using git within Codeanywhere to push code to
  * Live deployment [Python quiz](https://python-quiz-da8ccddf3267.herokuapp.com/)
 
  [Back to top](<#table-of-contents>)
-
+## Fork
 ### How To Fork The Repository On GitHub
 ![Fork](Documents/fork.png)
 It is possible to do a copy of a GitHub Repository by forking the GitHub account. The copy can then be viewed and it is also possible to do changes in the copy without affecting the original repository. To fork the repository, take these steps:
@@ -226,6 +228,7 @@ It is possible to do a copy of a GitHub Repository by forking the GitHub account
 
 [Back to top](<#table-of-content>)
 
+## Clone
 ### Create A Local Clone of A Project
 ![Clone](Documents/clone.png)
 To create a local clone of your repository, follow these steps:
