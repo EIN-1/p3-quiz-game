@@ -65,7 +65,7 @@ def username():
             break  # Exit the loop once username is given
         else:
             # if the username is empty, it will print this Error
-            print(f" {Fore.LIGHTRED_EX}Error: Please type your username.\n")
+            print(f" {Fore.LIGHTRED_EX}Error, Please type your username.\n")
             print('\n*********************************************\
 ********************************\n')
 
