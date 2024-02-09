@@ -1,4 +1,5 @@
-![game view](Documents/banner.png)
+# Python quiz
+![am I responsive view](Documents/amresponsive.png)
 * I used [am I responsive](https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/) to see how it looks on different products 
 
 * Live deployment [Python quiz](https://python-quiz-da8ccddf3267.herokuapp.com/) 
@@ -22,14 +23,16 @@ Python quiz game can be a fun and effective way for users to learn more about th
   + [New User Goals](#new-user-goals "New User Goals")
   + [Future Goals](#future-goals "Future Goals")
 + [Design](#design "Design")
-   + [Mock-up](#mock-up "Wireframes")
+   + [Flowchart](#flowchart "Flowchart")
 + [Features](#features "Features")
   + [Existing Features](#existing-features "Existing Features")
-    + [Landing Page](#landing-page "Landing Page")
+    + [Start game](#start-game "Start game")
     + [Game Rules](#game-rules "Game Rules")
     + [Enter Country Location](#enter-country-location "Enter Country Location")
     + [Enter Username](#enter-username "Enter Username")
     + [Possible Outcomes](#possible-outcomes "Possible Outcomes")
+    + [Points Earned](#points-earned "Points Earned")
+    + [Score](#Score "Score")
     + [Replay and Exit](#replay-and-exit "Play Again or Quit App")
   + [Features Left to Implement](#features-left-to-implement "Features Left to Implement")
 + [Testing](#testing "Testing")
@@ -70,13 +73,9 @@ Make the game more challenging by introducing multiple difficulty levels for the
 [Back to top](<#table-of-contents>)
 
 ## Design
-### Mock-up:
-![I am responsive](Documents/am responsive.png) live link (https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/)
-
 ### Flowchart:
-I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhance the overall structure.
-
 ![Flowchart](Documents/py.flowchart.png)
+I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhence the overall structure.
 
 [Back to top](<#table-of-contents>)
 
@@ -84,39 +83,49 @@ I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhance th
 
 ### Existing Features:
 
-#### Landing Page:
-![Landing page](Documents/header.png)
+#### Start game:
+![Start game](Documents/start.png)
 The landing page displays the game's title along with the game rules. To add an element of visual appeal, the text is rendered in red color, and the sentences are animated using the typewriter function. This approach is aimed at enriching the user's experience.
 
-### Game Rules
+#### Game Rules
+![Game Rules](Documents/rules.png)
 Players will review the game rules before beginning the P3 python quiz game. They can do so by scrolling.
-* ![Game Rules](Documents/rules.png)
 
-### Enter Location
+#### Enter Location
+![Enter country current location](Documents/location.png)
 Players will type in the conutry they are currently located, if the country does not exist they will be prompted with an invalid message until the player enters the correct country.
-* ![Enter country current location](Documents/location and username.png)
 
-### Enter Username
+#### Enter Username
+![Input username anonymously](Documents/username.png)
 Beneath the rules section, a prompt awaits the user, inviting them to input their name or choose to play anonymously to initiate the game. An image illustrating when the user gives their name's input can be found above, in the "Game Rules" picture.
-* ![Input username anonymously](image.png)
 
-### Possible Outcomes:
-The player may encounter three potential scenarios when selecting an answer form the given options: 
-+ The `correct answer`, the `incorrect answer` and the `invalid input` from the given options this is to avoid little mistakes that can be done by the user enhencing user's experience.
-  * ![Correct](Documents/correct or incorrect answer.png)
-  * ![Incorrect](Documents/correct or incorrect answer.png)
-+ If the input answer is not from the specified option then the player will be prompted with an invalid or error message until the player enters the correct input number provided.
-  * ![invalid input](Documents/invalid input .png)
+#### Possible Outcomes:
+![outcome](Documents/points.png)
+The player may encounter three potential scenarios when selecting an answer form the given options: `correct answer`, `incorrect answer`, `invalid input`.
 
-#### Reply or Exit
-After the game, regardless of whether the player wins or loses, a prompt will appear asking if they wish to continue or end the game `Reply` or `Exit`. The player can choose to keep playing or quit the game by typing yes for replay and no for exit.  
-    When you type yes to replay the game, it starts from the question.
-* ![Reply the game](Documents/replay.png)
-    When you type no to exit the game, it sends a goodbye message then it exits this is for user interface
-* ![Exit the game](/workspaces/p3-quiz-game/Documents/goodbye.png)
+If the input answer is not from the specified option then the player will be prompted with an invalid message until the player enters the correct input number provided. This is to avoid little mistakes that can be done by the user enhencing user's experience.
+
+#### Points Earned
+![Points](Documents/points.png)
+If you answer within 12 seconds you earn 10 points and if you exceed it you earn 5 points in the quiz so the users will have to play with a goal of getting more points based on a timer.
+
+#### Score
+![score](Documents/score.png)
+Total score at the end of the game, and you can choose to reply to improve your score or exit the quiz.
+
+### Reply or Exit
+After the game, regardless of whether the player wins or loses, a prompt will appear asking if they wish to continue or exit the game. The player can choose to keep playing or quit the game by typing yes for replay and no for exit.  
+
+#### Reply    
+![Reply the game](Documents/replay.png)
+When you type `yes` to `Reply` the game, it starts from the random questions without needing asking for a location and username that is to hence userexperience by letting the user straight away to enjoy the game.
+
+#### Exit    
+![Exit the game](Documents/goodbye.png)
+When you type `no` to  `Exit` the game, it sends a goodbye message then it exits this is for user's exprience that it clearly indicates that the came if finished.
 
 ### Features Left to Implement
-- To make the questions random per game so when the user replays they are not in the same order as before.
+- To creat more random questions for the game to be more interesting for the user.
 - Keep track of the scores for each gaming session and create a leaderboard to store the best scores.
 - Implement multiple difficulty levels.
 
@@ -125,26 +134,28 @@ After the game, regardless of whether the player wins or loses, a prompt will ap
 ## Testing
 
 ### Validator Testing
-* [CI PEP8 Online](https://pep8ci.herokuapp.com/). 
-   * No errors were returned.
-![PEP8 CI Validation](Documents/pep8 validator.png)
+  #### PEP8 CI Validation
+  ![PEP8 CI Validation](Documents/pep-validator.png)
+  No errors were found in [CI PEP8 Online testing](https://pep8ci.herokuapp.com/).
 
-* [Lighthouse](https://pep8ci.herokuapp.com/).
-    * in general it is good
-![Lighthouse testing](Documents/lightlight house.png)
+  #### Lighthouse
+  ![Lighthouse test](Documents/lightlight-house.png)
+  In general it was working well with [Lighthouse testing](https://pep8ci.herokuapp.com/)
 
 ### Manual Testing
-Any input that is not a digit and a number from the given options they will be prompted with an invalid message until the player enters the correct input.
-* ![Invalid Input ](Documents/invalid input .png)
+  #### Invalid input 
+  ![Invalid Input ](Documents/invalid-input.png)
+  Any input that is not a digit and a number from the given options they will be prompted with an invalid message until the player enters the correct input.
 
-Any input other than a yes or no letter will be considered invalid at the end of the game.
-* ![Invalid choise at the end](image.png)
+  #### Invalid response
+  ![Invalid choise at the end](Documents/yes-or-no.png)
+  Any input other than a `yes or no` will be considered invalid at the end of the game, this is not case sensitive so it can be in lower or uppercase letters.
 
 ### Bugs
-- No bugs found.
+- while loop was not exiting but it was an operander issue, it got fixed as for now no bugs
 
 ### Remaining Bugs
-* No bugs remaining from far as I know.
+- No bugs remaining as far as I know.
 
 [Back to top](<#table-of-contents>)
 
@@ -158,6 +169,7 @@ Any input other than a yes or no letter will be considered invalid at the end of
 - [GitHub](https://github.com/) - to store the repository for submission.
 - [Heroku](https://id.heroku.com/) - to deploy the live version of the terminal.
 - [AmIResponsive](https://ui.dev/amiresponsive?url=https://hangmangame-pp3-python-d5764adc1207.herokuapp.com/) - the responsive preview image on different gadgets.
+- [iloveimg](https://www.iloveimg.com/) - to compress the images.
 - Colorama - to add colored text to improve the readability by adding a color to the print statements and improve the user experience.
 - pyfiglet - to add ASCII font text in the game to improve the user experience.
 - pycountry - to add all the country names for the user to type in his country location.
@@ -210,6 +222,8 @@ To understand and implement the logic required for the game the following pages 
 + [Change the color of text in python shell?](https://stackoverflow.com/questions/11043260/change-the-color-of-text-in-python-shell) - to print different colored text.
 + [How to make colored text in python by MiloCat](https://ask.replit.com/t/how-do-i-make-colored-text-in-python/29288/8) - to display the text in different colors.
 + [Timer](https://www.learndatasci.com/solutions/python-timer/) - as a reference how to add the execution time before the game begins. 
++ [codedamn](https://codedamn.com/news/python/strip-whitespace-in-python) - Python Strip Whitespace: A Complete Guide
++ [stack overflow](https://stackoverflow.com/questions/51804117/conditions-are-met-but-program-not-breaking-out-of-while-loop) - conditions are met, but program not breaking out of while loop 
 
  [Back to top](<#table-of-contents>)
 
