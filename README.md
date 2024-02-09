@@ -1,18 +1,17 @@
 # Python quiz
 ![am I responsive view](Documents/amresponsive.png)
-* I used [am I responsive](https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/) to see how it looks on different products 
-
+* I used [am I responsive](https://ui.dev/amiresponsive?url=https://python-quiz-da8ccddf3267.herokuapp.com/) to see how it looks on different devices. 
 * Live deployment [Python quiz](https://python-quiz-da8ccddf3267.herokuapp.com/) 
 
-Python quiz game can be a fun and effective way for users to learn more about the language. Here's a general outline of how I have structure my quiz game:
+Python quiz game is a fun and effective way for users to learn more about the language. Here's a general outline of how I have structure my quiz game:
 
- **Introduction**: The purpose of the quiz game is for the users to learn python while answering questions, I creatd a question bank with a variety of questions that cover different topics in Python such as syntax, data types, control structures, functions....to ensure that the questions have multiple-choice options for users to select from.
+ **Introduction**: The purpose of the quiz game is for the users to learn python while answering questions, I creatd a question bank with a variety of random questions that cover different topics in Python such as syntax, data types, control structures, functions, etc.. to ensure that the questions have multiple-choice options for users to select from.
 
  **User Interaction**: Prompt the user with a question and display the answer options. Allow the user to select an answer by inputting the corresponding option number.
 
  **Scoring**: Keep track of the user's score as they answer questions. Award points for correct answers , the more you answer within 12 seconds you earn more, so your speed matters and at the end it displays the total score for all quetions.
 
- **Completion and Results**: When the user has answered all the questions, display their final score andprovide an option to replay or exit the game.
+ **Completion and Results**: When the user has answered all the questions, display their final score and provide an option to `replay or exit` the game.
 
 ## Table of Contents
 + [UX](#ux "UX")
@@ -59,7 +58,7 @@ To provide a simple and fun platform where the user can play while learning abou
 Python learners, anyone who is interessed in learning python, it can be a programmer from a different language who wants to divert to python too. 
 
 ### Communication:
-The game interface employs clear and colored print statements to guide users through each turn, ensuring an error-free and engaging gaming experience. This color-coded approach enhances text readability and adds a visually appealing element to the game.
+The game interface employs clear and colored print statements, ensuring an error-free and engaging gaming experience. These added colors enhances text readability and adds a visually appealing element to the game.
 
 ### Current User Goals:
 The primary goal for current users is to be entertained and engaged in playing while learning something productive at the same time playing multiple rounds of the quiz Game will help the user master alot of python rules, it will help the user love python before stating to code. 
@@ -68,7 +67,7 @@ The primary goal for current users is to be entertained and engaged in playing w
 New users are encouraged to experiment with the computer-based version of the python quiz game and widen there python knowledge, the multi-choice answers helps them to guess the correct answer from the given options.
 
 ### Future Goals:
-Make the game more challenging by introducing multiple difficulty levels for the user to choose to play and implementing a scoring leaderboard. Moreover, I intend to enhance the website's user appeal through the implementation of aesthetic styling and a structured layout. To achieve this objective, I need to use a web framework such as Flask or Django, which allows me serve web pages and static assets like CSS files. 
+Make the game more challenging by introducing multiple difficulty levels for the user to choose to play and implementing a scoring leaderboard. 
 
 [Back to top](<#table-of-contents>)
 
@@ -85,44 +84,45 @@ I used [Lucid](https://www.lucidchart.com/) to create a flowchart, to enhence th
 
 #### Start game:
 ![Start game](Documents/start.png)
-The landing page displays the game's title along with the game rules. To add an element of visual appeal, the text is rendered in red color, and the sentences are animated using the typewriter function. This approach is aimed at enriching the user's experience.
+The landing page displays the game's title along with the game rules. To add an element of visual appeal, the text is rendered in green color and the yellow color for the rules heading. This approach is aimed at enriching the user's experience.
 
 #### Game Rules
 ![Game Rules](Documents/rules.png)
-Players will review the game rules before beginning the P3 python quiz game. They can do so by scrolling.
+The user will review the game rules before beginning the python quiz game. You can do so by scrolling down.
 
 #### Enter Location
 ![Enter country current location](Documents/location.png)
-Players will type in the conutry they are currently located, if the country does not exist they will be prompted with an invalid message until the player enters the correct country.
+Beneath the rules, the user is invited to input their current country they are located in, if the country does not exists they will be prompted with an `error message` until the player enters the correct country.
 
 #### Enter Username
-![Input username anonymously](Documents/username.png)
-Beneath the rules section, a prompt awaits the user, inviting them to input their name or choose to play anonymously to initiate the game. An image illustrating when the user gives their name's input can be found above, in the "Game Rules" picture.
+![Input username](Documents/username.png)
+Beneath the country location, the user is invited to input their name and it should not be left empty to initiate the game. 
 
 #### Possible Outcomes:
-![outcome](Documents/points.png)
 The player may encounter three potential scenarios when selecting an answer form the given options: `correct answer`, `incorrect answer`, `invalid input`.
 
-If the input answer is not from the specified option then the player will be prompted with an invalid message until the player enters the correct input number provided. This is to avoid little mistakes that can be done by the user enhencing user's experience.
+![outcome](Documents/outcome.png)
+If the input answer is not from the specified options then the player will be prompted with an invalid message until the player enters the correct input number provided. This is to avoid little mistakes that can be done by the user enhencing user's experience.
 
 #### Points Earned
 ![Points](Documents/points.png)
-If you answer within 12 seconds you earn 10 points and if you exceed it you earn 5 points in the quiz so the users will have to play with a goal of getting more points based on a timer.
+If you answer within 12 seconds you earn 10 points and if you exceed it you earn 5 points in the quiz so the user will have to play with a target of earning more points based on a timer.
 
 #### Score
 ![score](Documents/score.png)
-Total score at the end of the game, and you can choose to reply to improve your score or exit the quiz.
+User will get a total score at the end of the game, and you can choose to reply to improve your score or exit the quiz.
 
 ### Reply or Exit
-After the game, regardless of whether the player wins or loses, a prompt will appear asking if they wish to continue or exit the game. The player can choose to keep playing or quit the game by typing yes for replay and no for exit.  
+After the game, regardless of whether the player wins or loses, a prompt will appear asking if they wish to continue or exit the game. The player can choose to keep playing or quit the game by typing `yes` for replay and `no` for exit.  
 
 #### Reply    
 ![Reply the game](Documents/replay.png)
-When you type `yes` to `Reply` the game, it starts from the random questions without needing asking for a location and username that is to hence userexperience by letting the user straight away to enjoy the game.
+When you type `yes` to `Reply` the game, it starts from the random questions, that is to hence user's experience by letting the user 
+ start straight away to enjoy the game since he/she is already logged in.
 
 #### Exit    
 ![Exit the game](Documents/goodbye.png)
-When you type `no` to  `Exit` the game, it sends a goodbye message then it exits this is for user's exprience that it clearly indicates that the came if finished.
+When you type `no` to  `Exit` the game, it sends a goodbye message then it exits this is to clearly indicate to the user that the game has finished.
 
 ### Features Left to Implement
 - To creat more random questions for the game to be more interesting for the user.
@@ -143,13 +143,23 @@ When you type `no` to  `Exit` the game, it sends a goodbye message then it exits
   In general it was working well with [Lighthouse testing](https://pep8ci.herokuapp.com/)
 
 ### Manual Testing
-  #### Invalid input 
+  #### Erroe message 
   ![Invalid Input ](Documents/invalid-input.png)
-  Any input that is not a digit and a number from the given options they will be prompted with an invalid message until the player enters the correct input.
+    Any input that is not a number from the given options is an error, the user will be prompted with an `error message` until the player enters the correct number.
 
   #### Invalid response
   ![Invalid choise at the end](Documents/yes-or-no.png)
-  Any input other than a `yes or no` will be considered invalid at the end of the game, this is not case sensitive so it can be in lower or uppercase letters.
+  Any input other than a `yes or no` will be considered `invalid` at the end of the game, this is not case sensitive so it can be in lower or uppercase letters.
+
+### Browser Compatibility
+`Python quiz` game was tested for functionality and appearance in the following browsers on desktop. No visible or funcional issues on all 
+the browsers below.
+
+- Google Chrome - Version 121.0.6167.161 (Official Build) (64-bit)
+- Microsoft Edge - Version 121.0.2277.112 (Official build) (64-bit)
+- Mozilla Firefox 122.0.1 (64-bit)
+
+[Back to top](<#table-of-content>)
 
 ### Bugs
 - while loop was not exiting but it was an operander issue, it got fixed as for now no bugs
@@ -204,9 +214,29 @@ The version control was maintained using git within Codeanywhere to push code to
  * Scroll down to deploy: 
     * at first I used`Option 2` it selects manually deploys (Will Update manually with every "git push"). To see my progress and changes.
     * at the end I used `Option 1` it selects Automatic deploys (Will Update automatically with every "git push"). This was chosen for this project.
- * Live deployment [P3 Python quiz](https://python-quiz-da8ccddf3267.herokuapp.com/)
+ * Live deployment [Python quiz](https://python-quiz-da8ccddf3267.herokuapp.com/)
 
  [Back to top](<#table-of-contents>)
+
+### How To Fork The Repository On GitHub
+![Fork](Documents/fork.png)
+It is possible to do a copy of a GitHub Repository by forking the GitHub account. The copy can then be viewed and it is also possible to do changes in the copy without affecting the original repository. To fork the repository, take these steps:
+
+1. After logging in to GitHub, locate the repository. On the top right side of the page there is a 'Fork' button. Click on the button to create a copy of the original repository.
+
+[Back to top](<#table-of-content>)
+
+### Create A Local Clone of A Project
+![Clone](Documents/clone.png)
+To create a local clone of your repository, follow these steps:
+
+1. When you are in the repository, find the code tab and click it.
+2. To the left of the green GitPod button, press the 'code' menu. There you will find a link to the repository. Click on the clipboard icon to copy the URL.
+3. Use an IDE and open Git Bash. Change directory to the location where you want the cloned directory to be made.
+4. Type 'git clone', and then paste the URL that you copied from GitHub. Press enter and a local clone will be created.
+
+[Back to top](<#table-of-content>)
+
 
  ## Credits
 For inspiration, I watched the following YouTube tutorials by:
@@ -228,8 +258,11 @@ To understand and implement the logic required for the game the following pages 
  [Back to top](<#table-of-contents>)
 
  ## Acknowledgments
-A special acknowledgment to someone's name [i might delete this ](https) for he/she advice, support and encouragement.
+ The application `Python quiz` was completed as the Portfolio Project 3 (*Python*) for the Full Stack Software Development Diploma at the [Code Institute](https://codeinstitute.net/). 
+ - I would like to thank my mentor [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/) for relevant feedback during the project.
+- A special thanks to my cohort facilitator Ms. Kay Welfare for her   advice, support and encouragement.
 
- Elsie Nagawa 2024.
+
+ Elsie Nagawa 09.02.2024.
 
  [Back to top](<#table-of-contents>)
